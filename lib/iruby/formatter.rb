@@ -62,12 +62,11 @@ module IRuby
         end
 
         if keys
-          header = keys.to_a
           keys.merge(0...array_size)
         else
           keys = 0...array_size
         end
-        keys = keys.to_a
+        header = keys = keys.to_a
       end
 
       header ||= keys if options[:header]
